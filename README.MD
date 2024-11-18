@@ -1,53 +1,52 @@
 # SpaceX Launches Viewer
 
-Este projeto é uma aplicação web desenvolvida com Django que exibe informações sobre lançamentos da SpaceX, como lançamentos bem-sucedidos, falhados e futuros. A aplicação consome a API pública da SpaceX e exibe os dados de uma forma organizada.
+This project is a web application developed with Django that displays information about **SpaceX launches**, including successful, failed, and upcoming launches. The application consumes the public SpaceX API and organizes the data for better visualization.
 
-## Funcionalidades
+## Features
 
-- Exibe **lançamentos bem-sucedidos** da SpaceX.
-- Exibe **lançamentos falhados** da SpaceX.
-- Exibe **lançamentos futuros** da SpaceX.
-- Interface interativa para navegar entre as diferentes seções de lançamentos.
+- Displays **successful SpaceX launches.**
+- Displays **failed SpaceX launches.**
+- Displays **upcoming SpaceX launches.**
+- Provides an **interactive interface** to navigate between different launch sections.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Django**: Framework web utilizado para desenvolver a aplicação.
-- **Requests**: Biblioteca para fazer requisições HTTP à API da SpaceX.
-- **HTML/CSS**: Usado para estruturar e estilizar a interface do usuário.
+- **Django**: Web framework used to develop the application.
+- **Requests**: Library to perform HTTP requests to the SpaceX API.
+- **HTML/CSS**: Used to structure and style the user interface.
 
-## Requisitos
+## Requirements
 
-Certifique-se de ter as seguintes dependências instaladas:
+Make sure the following dependencies are installed:
 
 - **Python 3.8+**
 - **Django 5.1.3**
 - **Requests**
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/seu-usuario/spaceX-launches-viewer.git
    cd spaceX-launches-viewer
 
-2. Crie um ambiente virtual (recomendado):
-
+2. Create a virtual environment (recommended):
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+    source venv/bin/activate  #  On Windows, use `venv\Scripts\activate`
 
-3. Instale as dependências:
+3. Install the dependencies:
 
     ```bash
     pip install -r requirements.txt
 
-4. Execute o servidor de desenvolvimento:
+4. Run the development server:
 
     ```bash
     python manage.py runserver
 
-5. Acesse a aplicação no seu navegador:
+5. Access the application in your browser:
 
     ```arduino
     http://127.0.0.1:8000
