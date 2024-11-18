@@ -30,3 +30,24 @@ Certifique-se de ter as seguintes dependências instaladas:
    ```bash
    git clone https://github.com/seu-usuario/spaceX-launches-viewer.git
    cd spaceX-launches-viewer
+
+2. Crie um ambiente virtual (recomendado):
+
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+
+3. Instale as dependências:
+
+    ```bash
+    pip install -r requirements.txt
+
+4. Execute o servidor de desenvolvimento:
+
+    ```bash
+    python manage.py runserver
+
+5. Acesse a aplicação no seu navegador:
+
+    ```arduino
+    http://127.0.0.1:8000
