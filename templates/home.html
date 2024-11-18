@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="launch-menu">
+        <li><a href="#" onclick="showSection('success')">Successful Launches</a></li>
+        <li><a href="#" onclick="showSection('failed')">Failed Launches</a></li>
+        <li><a href="#" onclick="showSection('upcoming')">Upcoming Launches</a></li>
+    </ul>
+
+    <h1>SpaceX Launches</h1>
+
+    <div id="success" class="launch-section">
+        <h2>Successful Launches</h2>
+        <div class="launch-list">
+            {% for launch in success_launches %}
+                <div class="launch-item">
+                    <strong>Mission:</strong> {{ launch.name }}<br>
+                    <strong>Date:</strong> {{ launch.date_utc }}<br>
+                    <strong>Details:</strong> {{ launch.details }}<br>
+                    <a href="{{ launch.links.webcast }}" target="_blank">Watch Webcast</a><br>
+
+                    <!-- Detalhes do Payload -->
+                    {% if launch.payloads %}
+                        <div class="payload-details">
+                            <h3>Payload Information</h3>
+                            <p><strong>Article:</strong> <a href="{{ launch.links.article }}" target="_blank">Read More</a></p>
+                            <p><strong>Wikipedia:</strong> <a href="{{ launch.links.wikipedia }}" target="_blank">Wikipedia</a></p>
+                            {% if launch.links.patch.small %}
+                                <p><strong>Mission Patch:</strong><br><img src="{{ launch.links.patch.small }}" alt="Mission Patch"></p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <p>No successful launches found.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="failed" class="launch-section">
+        <h2>Failed Launches</h2>
+        <div class="launch-list">
+            {% for launch in failed_launches %}
+                <div class="launch-item">
+                    <strong>Mission:</strong> {{ launch.name }}<br>
+                    <strong>Date:</strong> {{ launch.date_utc }}<br>
+                    <strong>Details:</strong> {{ launch.details }}<br>
+                </div>
+            {% empty %}
+                <p>No failed launches found.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="upcoming" class="launch-section">
+        <h2>Upcoming Launches</h2>
+        <div class="launch-list">
+            {% for launch in upcoming_launches %}
+                <div class="launch-item">
+                    <strong>Mission:</strong> {{ launch.name }}<br>
+                    <strong>Date:</strong> {{ launch.date_utc }}<br>
+                </div>
+            {% empty %}
+                <p>No upcoming launches found.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.launch-section');
+            sections.forEach(sec => sec.style.display = 'none');
+            
+            document.getElementById(section).style.display = 'block';
+        }
+        window.onload = function() {
+            showSection('success');
+        };
+    </script>
+</body>
+</html>

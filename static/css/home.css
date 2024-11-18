@@ -1,0 +1,140 @@
+/* home.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+
+.launch-section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.launch-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+ul li a {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.launch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os lançamentos */
+}
+
+.launch-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.launch-item strong {
+    color: #333;
+}
+
+.launch-item a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.launch-item a:hover {
+    text-decoration: underline;
+}
+
+.launch-item .payload-details {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.launch-item .payload-details a {
+    color: #1e90ff;
+}
+
+.launch-section {
+    display: none; /* Oculta as seções até que sejam ativadas */
+}
+
+.launch-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    background-color: #ccc9c99a;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.launch-menu li {
+    display: inline;
+}
+
+.launch-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.launch-menu a:hover {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.launch-menu a:focus {
+    outline: none;
+    background-color: #1e90ff;
+    color: white;
+}
